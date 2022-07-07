@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body,html {
+font-family: 'Barlow Semi Condensed', sans-serif;
+background-color: hsl(210, 46%, 95%);
+
+}
+
+.container {
+    margin: 2em;
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 2em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1.3);
+}
+
+.card__purple {
+    background-color: hsl(263, 55%, 52%);
+   
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: 90% 0;
+}
+
+.card img {
+    border-radius: 50%;
+    border: 3px solid hsla(0, 0%, 100%, .5);
+}
+
+
+.card__header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding-bottom: 1em;
+}
+
+.card__header h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 1;
+}
+
+.card__user h4 {
+    font-size: 0.9375rem;
+    color: white;
+    opacity: .5;
+    font-weight: 500;
+}
+
+.card__text-strong {
+    font-weight: 600;
+    line-height: 1.3;
+    font-size: 1.5rem;
+    color: white;
+
+}
+
+.card__text p{
+    color: hsl(0, 0%, 81%);
+    opacity: .7;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.6;
+    padding-top: 1.5em;
+}
+
+.card__darkgrey {
+    background-color: hsl(217, 19%, 35%);
+    
+}
+
+.card__white-small, .card__white-tall {
+    background-color: white;
+}
+.card__white-small h3,
+.card__white-small h4,
+.card__white-small .card__text, 
+.card__white-small .card__text-strong {
+    color:   hsl(217, 19%, 35%);
+}
+
+.card__white-small .card__text-strong {
+    padding-bottom: 1em;
+}
+
+.card__white-small .card__text {
+    opacity: 0.7;
+}
+
+
+.card__darkblackish {
+    background-color: hsl(219, 29%, 14%);
+}
+
+.card__white-tall h3,
+.card__white-tall h4,
+.card__white-tall .card__text, 
+.card__white-tall .card__text-strong {
+    color: hsl(217, 19%, 35%);
+}
+
+.card__white-tall .card__text-strong {
+    padding-bottom: .7em;
+    
+}
+
+.card__white-tall .card__text {
+    opacity: 0.7;
+}
+
+
+.attribution {
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "purple purple darkgrey white-tall"
+        "purple purple  darkgrey white-tall"
+        "white-small darkblackish darkblackish white-tall";
+    }
+
+    .card__purple {
+        grid-area: purple;
+    }
+
+    .card__darkgrey {
+        grid-area: darkgrey;
+    }
+    .card__white-tall {
+        grid-area: white-tall;
+    }
+
+    .card__white-small {
+        grid-area: white-small;
+    }
+
+    .card__darkblackish {
+        grid-area: darkblackish;
+    }
+}
